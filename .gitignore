@@ -1,0 +1,40 @@
+# 操作系统生成的文件 / OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# 临时文件 / Temporary files
+*.tmp
+*.temp
+~$*
+*.swp
+*.swo
+*~
+
+# 备份文件 / Backup files
+*.bak
+*.backup
+
+# 压缩文件（可选） / Compressed files (optional)
+# *.zip
+# *.rar
+# *.7z
+
+# IDE 相关 / IDE related
+.vscode/
+.idea/
+*.iml
+
+# 编译输出 / Compiled output
+*.class
+*.o
+*.pyc
+__pycache__/
+
+# 日志文件 / Log files
+*.log
