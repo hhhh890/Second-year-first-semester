@@ -1,0 +1,47 @@
+
+tar -xvf bomb.tar
+
+gdb ./bomb
+
+b phase_
+break explode_bomb
+delete breakpoint 2
+
+b *<adr>
+continue
+finish
+
+x/s <address>
+x/wx $rsp + 4  =value
+
+
+run:
+r solution.txt
+run < solution.txt
+
+layout asm
+tui disable  # 关闭所有 TUI 窗口，返回普通命令行模式
+(gdb) layout src   # 切换回源代码窗口（或其他布局）
+(gdb) layout split # 切换回分屏模式（源代码 + 汇编）
+(gdb) layout next  # 循环切换布局模式，直到关闭汇编窗口
+nexti
+ni
+nexti 5
+
+si
+
+print dizhi:
+info address array.3599/node1/n1
+	Symbol "array.3599" is at 0x402620 in a file compiled without debugging.
+info registers rip
+info program
+info frame
+info variables
+info args
+
+print (char*)$rax
+
+print $eax
+
+
+disas phase_

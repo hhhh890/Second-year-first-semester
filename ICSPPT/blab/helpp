@@ -1,0 +1,38 @@
+
+tar -xvf bomb.tar
+
+gdb ./bomb
+
+b phase_
+break explode_bomb
+
+b *<adr>
+continue
+finish
+
+x/s <address>
+x/wx $rsp + 4  =value
+
+
+run:
+r solution.txt
+run < solution.txt
+nexti
+ni
+nexti 5
+
+si
+
+print dizhi:
+info address array.3599/node1/n1
+	Symbol "array.3599" is at 0x402620 in a file compiled without debugging.
+info registers rip
+info program
+info frame
+
+print (char*)$rax
+
+print $eax
+
+
+disas phase_

