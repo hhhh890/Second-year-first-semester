@@ -1,0 +1,17 @@
+[  6%] Built target analyze
+[ 15%] Built target planner
+[ 25%] Built target storage
+[ 34%] Built target index
+[ 43%] Built target recovery
+[ 53%] Built target transaction
+[ 59%] Built target system
+[ 68%] Built target record
+[ 75%] Built target execution
+[ 93%] Built target parser
+[100%] Built target rmdb
+[ 50%] Building CXX object src/test/tpcc/CMakeFiles/tpcc_loader.dir/tpcc_loader.cpp.o
+[100%] Linking CXX executable ../../../bin/tpcc_loader
+[100%] Built target tpcc_loader
+[ 50%] Building CXX object src/test/tpcc/CMakeFiles/tpcc_driver.dir/tpcc_driver.cpp.o
+[100%] Linking CXX executable ../../../bin/tpcc_driver
+[100%] Built target tpcc_driver

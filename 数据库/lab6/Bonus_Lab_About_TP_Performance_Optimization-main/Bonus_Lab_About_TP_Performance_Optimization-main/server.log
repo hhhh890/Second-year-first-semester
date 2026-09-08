@@ -1,0 +1,3042 @@
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+i_recvBytes: 84 
+ Read from client 24: INSERT INTO history VALUES (201,10,1,10,1,0,413.846466,'aaaaaaaaaaaaaaaaaaaaaaaa');
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+i_recvBytes: 8 
+ Read from client 24: COMMIT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=6;
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=1;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+i_recvBytes: 60 
+ Read from client 21: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=7;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 22: UPDATE warehouse SET w_ytd=948782.125000 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 45 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 1)
+i_recvBytes: 64 
+ Read from client 21: UPDATE district SET d_next_o_id=3032 WHERE d_w_id=1 AND d_id=7;
+[DEBUG] UPDATE on Waiting for request...
+i_recvBytes: 8 
+ Read from client 23: COMMIT;
+Waiting for request...
+i_recvBytes: 64 
+ Read from client 24: UPDATE district SET d_next_o_id=3029 WHERE d_w_id=1 AND d_id=1;
+i_recvBytes: 54 
+ Read from client 22: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=6;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+district uses index: d_w_id d_id  (conds: 2, X lock)
+Transaction 28327 aborted for deadlock prevention
+
+Waiting for request...
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 23: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=1;
+Transaction 28326 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 49 
+ Read from client 21: INSERT INTO orders VALUES (3031,7,1,1,0,0,11,1);
+i_recvBytes: 67 
+ Read from client 22: UPDATE district SET d_ytd=107457.656250 WHERE d_w_id=1 AND d_id=6;
+i_recvBytes: 49 
+ Read from client 24: INSERT INTO orders VALUES (3028,1,1,51,0,0,7,1);
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 23: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=2;
+Transaction 28330 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 21: INSERT INTO new_orders VALUES (3031,7,1);
+i_recvBytes: 42 
+ Read from client 24: INSERT INTO new_orders VALUES (3028,1,1);
+i_recvBytes: 103 
+ Read from client 22: SELECT c_balance, c_ytd_payment, c_payment_cnt FROM customer WHERE c_w_id=1 AND c_d_id=6 AND c_id=213;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28331 aborted for deadlock prevention
+
+Waiting for request...
+Transaction 28332 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=2122;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+[DEBUG] SELECT on customer uses index: c_w_id c_d_id c_id  (conds: 3)
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 24: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=3022;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 23: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=3;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=35 WHERE s_w_id=1 AND s_i_id=2122;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 85 
+ Read from client 22: UPDATE customer SET c_balance=-2246.246826 WHERE c_w_id=1 AND c_d_id=6 AND c_id=213;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 24: UPDATE stock SET s_quantity=34 WHERE s_w_id=1 AND s_i_id=3022;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3031,7,1,1,2122,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 23: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=4;
+i_recvBytes: 88 
+ Read from client 22: UPDATE customer SET c_ytd_payment=2246.246826 WHERE c_w_id=1 AND c_d_id=6 AND c_id=213;
+i_recvBytes: 87 
+ Read from client 24: INSERT INTO order_line VALUES (3028,1,1,1,3022,1,0,5,5.00,'ssssssssssssssssssssssss');
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=6655;
+i_recvBytes: 61 
+ Read from client 24: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=3146;
+
+Waiting for request...
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 23: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=5;
+[DEBUG] SELECT on new_orders uses index: i_recvBytes: 78 
+ Read from client 22: UPDATE customer SET c_payment_cnt=2 WHERE c_w_id=1 AND c_d_id=6 AND c_id=213;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=97 WHERE s_w_id=1 AND s_i_id=6655;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 24: UPDATE stock SET s_quantity=56 WHERE s_w_id=1 AND s_i_id=3146;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+no_w_id no_d_id no_o_id  (conds: 2)
+i_recvBytes: 83 
+ Read from client 22: INSERT INTO history VALUES (213,6,1,6,1,0,2236.246826,'aaaaaaaaaaaaaaaaaaaaaaaa');
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3031,7,1,2,6655,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 23: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=6;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+i_recvBytes: 8 
+ Read from client 22: COMMIT;
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 24: INSERT INTO order_line VALUES (3028,1,1,2,3146,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=8585;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 24: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=2471;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 23: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=7;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=78 WHERE s_w_id=1 AND s_i_id=8585;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 24: UPDATE stock SET s_quantity=10 WHERE s_w_id=1 AND s_i_id=2471;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 22: UPDATE warehouse SET w_ytd=950416.250000 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 23: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=8;
+[DEBUG] SELECT on new_orders uses index: no_w_idi_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3031,7,1,3,8585,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 24: INSERT INTO order_line VALUES (3028,1,1,3,2471,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 54 
+ Read from client 22: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=3;
+ no_d_id no_o_id  (conds: 2)
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=7040;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 23: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=9;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+i_recvBytes: 61 
+ Read from client 24: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=5291;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 66 
+ Read from client 22: UPDATE district SET d_ytd=94123.265625 WHERE d_w_id=1 AND d_id=3;
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=14 WHERE s_w_id=1 AND s_i_id=7040;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 23: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=10;
+i_recvBytes: 63 
+ Read from client 24: UPDATE stock SET s_quantity=14 WHERE s_w_id=1 AND s_i_id=5291;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 103 
+ Read from client 22: SELECT c_balance, c_ytd_payment, c_payment_cnt FROM customer WHERE c_w_id=1 AND c_d_id=3 AND c_id=105;
+[DEBUG] SELECT on customer uses index: c_w_id c_d_id c_id  (conds: 3)
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3031,7,1,4,7040,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 24: INSERT INTO order_line VALUES (3028,1,1,4,5291,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+Waiting for request...
+i_recvBytes: 8 
+ Read from client 23: COMMIT;
+i_recvBytes: 60 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=112;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 24: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=4285;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 85 
+ Read from client 22: UPDATE customer SET c_balance=-1644.113159 WHERE c_w_id=1 AND c_d_id=3 AND c_id=105;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28360 aborted for deadlock prevention
+
+i_recvBytes: 61 
+ Read from client 21: UPDATE stock SET s_quantity=7 WHERE s_w_id=1 AND s_i_id=112;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 24: UPDATE stock SET s_quantity=33 WHERE s_w_id=1 AND s_i_id=4285;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 88 
+ Read from client 22: UPDATE customer SET c_ytd_payment=1644.113159 WHERE c_w_id=1 AND c_d_id=3 AND c_id=105;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+i_recvBytes: 86 
+ Read from client 21: INSERT INTO order_line VALUES (3031,7,1,5,112,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 87 
+ Read from client 24: INSERT INTO order_line VALUES (3028,1,1,5,4285,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 78 
+ Read from client 22: UPDATE customer SET c_payment_cnt=2 WHERE c_w_id=1 AND c_d_id=3 AND c_id=105;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=6;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28365 aborted for deadlock prevention
+
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=7131;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 24: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=726;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=69 WHERE s_w_id=1 AND s_i_id=7131;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 83 
+ Read from client 22: INSERT INTO history VALUES (105,3,1,3,1,0,1634.113159,'aaaaaaaaaaaaaaaaaaaaaaaa');
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28371 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+i_recvBytes: 62 
+ Read from client 24: UPDATE stock SET s_quantity=67 WHERE s_w_id=1 AND s_i_id=726;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 8 
+ Read from client 22: COMMIT;
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3031,7,1,6,7131,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 86 
+ Read from client 24: INSERT INTO order_line VALUES (3028,1,1,6,726,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on i_recvBytes: 60 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=501;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 24: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=543;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=4;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+i_recvBytes: 55 
+ Read from client 22: UPDATE warehouse SET w_ytd=951166.437500 WHERE w_id=1;
+i_recvBytes: 62 
+ Read from client 21: UPDATE stock SET s_quantity=11 WHERE s_w_id=1 AND s_i_id=501;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+[DEBUG] UPDATE on Waiting for request...
+stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+i_recvBytes: 62 
+ Read from client 24: UPDATE stock SET s_quantity=33 WHERE s_w_id=1 AND s_i_id=543;
+Waiting for request...
+i_recvBytes: 86 
+ Read from client 21: INSERT INTO order_line VALUES (3031,7,1,7,501,1,0,5,5.00,'ssssssssssssssssssssssss');
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+i_recvBytes: 54 
+ Read from client 22: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=3;
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=7129;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 64 
+ Read from client 23: UPDATE district SET d_next_o_id=3026 WHERE d_w_id=1 AND d_id=4;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 86 
+ Read from client 24: INSERT INTO order_line VALUES (3028,1,1,7,543,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 66 
+ Read from client 22: UPDATE district SET d_ytd=94873.445312 WHERE d_w_id=1 AND d_id=3;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+Transaction 28379 aborted for deadlock prevention
+
+Waiting for request...
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 8 
+ Read from client 24: COMMIT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 50 
+ Read from client 23: INSERT INTO orders VALUES (3025,4,1,38,0,0,10,1);
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: INSERT INTO new_orders VALUES (3025,4,1);
+i_recvBytes: 103 
+ Read from client 22: SELECT c_balance, c_ytd_payment, c_payment_cnt FROM customer WHERE c_w_id=1 AND c_d_id=3 AND c_id=195;
+[DEBUG] SELECT on customer uses index: c_w_id c_d_id c_id  (conds: 3)
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=4;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28387 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=9624;
+Waiting for request...
+i_recvBytes: 84 
+ Read from client 22: UPDATE customer SET c_balance=-760.179993 WHERE c_w_id=1 AND c_d_id=3 AND c_id=195;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=92 WHERE s_w_id=1 AND s_i_id=7129;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Transaction 28390 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3031,7,1,8,7129,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 23: UPDATE stock SET s_quantity=6 WHERE s_w_id=1 AND s_i_id=9624;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=6310;
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 22: UPDATE customer SET c_ytd_payment=760.179993 WHERE c_w_id=1 AND c_d_id=3 AND c_id=195;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+[DEBUG] UPDATE on customerTransaction 28395 aborted for deadlock prevention
+
+ uses index: c_w_id i_recvBytes: 42 
+ c_d_id c_idWaiting for request...
+i_recvBytes: 87 
+ Read from client 23: INSERT INTO order_line VALUES (3025,4,1,1,9624,1,0,5,5.00,'ssssssssssssssssssssssss');
+  (conds: 3, X lock)
+Waiting for request...
+i_recvBytes: 78 
+ Read from client 22: UPDATE customer SET c_payment_cnt=2 WHERE c_w_id=1 AND c_d_id=3 AND c_id=195;
+Read from client 24: SELECT w_ytd FROM warehouse WHERE w_id=1;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=1135;
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+i_recvBytes: 82 
+ Read from client 22: INSERT INTO history VALUES (195,3,1,3,1,0,750.179993,'aaaaaaaaaaaaaaaaaaaaaaaa');
+Waiting for request...
+i_recvBytes: 8 
+ Read from client 22: COMMIT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 24: UPDATE warehouse SET w_ytd=954028.812500 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 23: UPDATE stock SET s_quantity=79 WHERE s_w_id=1 AND s_i_id=1135;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+i_recvBytes: 42 
+ Read from client 21: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28400 aborted for deadlock prevention
+
+i_recvBytes: 54 
+ Read from client 24: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=9;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 23: INSERT INTO order_line VALUES (3025,4,1,2,1135,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+i_recvBytes: 66 
+ Read from client 24: UPDATE district SET d_ytd=78712.867188 WHERE d_w_id=1 AND d_id=9;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: Transaction 28399 aborted for deadlock prevention
+
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=8990;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1i_recvBytes: 60 
+ )
+2, X lock)
+Transaction 28407 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=3;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28409 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28411 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28413 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 103 
+ Read from client 24: SELECT c_balance, c_ytd_payment, c_payment_cnt FROM customer WHERE c_w_id=1 AND c_d_id=9 AND c_id=267;
+[DEBUG] SELECT on customer uses index: c_w_id c_d_id c_id  (conds: 3)
+Waiting for request...
+Read from client 21: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=6;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+Waiting for request...i_recvBytes: 7 
+ 
+i_recvBytes: 63 
+ Read from client 23: UPDATE stock SET s_quantity=89 WHERE s_w_id=1 AND s_i_id=8990;
+Read from client 22: BEGIN;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Transaction 28404 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+Waiting for request...
+i_recvBytes: 85 
+ Read from client 24: UPDATE customer SET c_balance=-2872.388428 WHERE c_w_id=1 AND c_d_id=9 AND c_id=267;
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 23: INSERT INTO order_line VALUES (3025,4,1,3,8990,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28416 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=4;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=1004;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+i_recvBytes: 88 
+ Read from client 24: UPDATE customer SET c_ytd_payment=2872.388428 WHERE c_w_id=1 AND c_d_id=9 AND c_id=267;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 21: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=3;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28421 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 23: UPDATE stock SET s_quantity=38 WHERE s_w_id=1 AND s_i_id=1004;
+Transaction 28420 aborted for deadlock prevention
+
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+i_recvBytes: 78 
+ Read from client 24: UPDATE customer SET c_payment_cnt=2 WHERE c_w_id=1 AND c_d_id=9 AND c_id=267;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+i_recvBytes: 83 
+ Read from client 24: INSERT INTO history VALUES (267,9,1,9,1,0,2862.388428,'aaaaaaaaaaaaaaaaaaaaaaaa');
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+i_recvBytes: 60 
+ Read from client 21: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=8;
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 23: INSERT INTO order_line VALUES (3025,4,1,4,1004,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+Waiting for request...
+[DEBUG] SELECT on district uses index: i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+Waiting for request...
+d_w_idi_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=3;
+i_recvBytes: 8 
+ Read from client 24: COMMIT;
+ d_id  (conds: 2)
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2Transaction 28425 aborted for deadlock prevention
+
+)
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=1352;
+[DEBUG] SELECT on stock uses index: s_w_idi_recvBytes: 7 
+ Read from client 21: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+ s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 64 
+ Read from client 22: UPDATE district SET d_next_o_id=3026 WHERE d_w_id=1 AND d_id=3;
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+i_recvBytes: 42 
+ Read from client 21: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=8;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28432 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 23: UPDATE stock SET s_quantity=66 WHERE s_w_id=1 AND s_i_id=1352;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+i_recvBytes: 55 
+ Read from client 21: UPDATE warehouse SET w_ytd=957521.875000 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 23: INSERT INTO order_line VALUES (3025,4,1,5,1352,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 21: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=10;
+Waiting for request...
+i_recvBytes: 50 
+ Read from client 22: INSERT INTO orders VALUES (3025,3,1,14,0,0,11,1);
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28431 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 24: SELECT w_ytd FROM warehouse WHERE w_id=1;
+i_recvBytes: 42 
+ Read from client 22: INSERT INTO new_orders VALUES (3025,3,1);
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=6387;
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=1431;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+i_recvBytes: 55 
+ Read from client 24: UPDATE warehouse SET w_ytd=956937.687500 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 22: UPDATE stock SET s_quantity=10 WHERE s_w_id=1 AND s_i_id=1431;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 23: UPDATE stock SET s_quantity=10 WHERE s_w_id=1 AND s_i_id=6387;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Transaction 28439 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 22: INSERT INTO order_line VALUES (3025,3,1,1,1431,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=8387;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 22: UPDATE stock SET s_quantity=25 WHERE s_w_id=1 AND s_i_id=8387;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 54 
+ Read from client 24: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=4;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28436 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 23: INSERT INTO order_line VALUES (3025,4,1,6,6387,1,0,5,5.00,'ssssssssssssssssssssssss');
+Transaction 28440 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 22: INSERT INTO order_line VALUES (3025,3,1,2,8387,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=5819;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 22: UPDATE stock SET s_quantity=45 WHERE s_w_id=1 AND s_i_id=5819;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 22: INSERT INTO order_line VALUES (3025,3,1,3,5819,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=2095;
+[DEBUG] SELECT on stock uses index: i_recvBytes: 7 
+ s_w_id i_recvBytes: 7 
+ Read from client s_i_id Read from client  (conds: 242: ABORT;
+)
+Waiting for request...
+21: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=4827;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2Waiting for request...
+i_recvBytes: 61 
+ i_recvBytes: 63 
+ Read from client 21: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=10;
+Read from client 22: UPDATE stock SET s_quantity=82 WHERE s_w_id=1 AND s_i_id=2095;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28442 aborted for deadlock prevention
+
+[DEBUG] UPDATE on Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+)
+Transaction 28443 aborted for deadlock prevention
+
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=7;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28445 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+stock uses index: s_w_id s_i_id  (conds: Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+i_recvBytes: 42 
+ Read from client 21: SELECT w_ytd FROM warehouse WHERE w_id=1;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: SELECT w_ytd FROM warehouse WHERE w_id=1;
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=2;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28450 aborted for deadlock prevention
+
+Waiting for request...
+[DEBUG] SELECT on warehouse uses index: w_id2[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+  (conds: 1)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 23: UPDATE warehouse SET w_ytd=958388.062500 WHERE w_id=1;
+, X lock)
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Transaction 28448 aborted for deadlock prevention
+
+i_recvBytes: 55 
+ Read from client 21: UPDATE warehouse SET w_ytd=957601.625000 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+i_recvBytes: 54 
+ Read from client 21: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=8;
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 22: INSERT INTO order_line VALUES (3025,3,1,4,2095,1,0,5,5.00,'ssssssssssssssssssssssss');
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28446 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 54 
+ Read from client 23: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=8;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28452 aborted for deadlock prevention
+
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=8;
+[DEBUG] SELECT on district uses index: d_w_idi_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=2190;
+ d_id  (conds: 2)
+Transaction 28453 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 22: UPDATE stock SET s_quantity=56 WHERE s_w_id=1 AND s_i_id=2190;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 22: INSERT INTO order_line VALUES (3025,3,1,5,2190,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=9491;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 22: UPDATE stock SET s_quantity=31 WHERE s_w_id=1 AND s_i_id=9491;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+i_recvBytes: 42 
+ Read from client 21: SELECT w_ytd FROM warehouse WHERE w_id=1;
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 22: INSERT INTO order_line VALUES (3025,3,1,6,9491,1,0,5,5.00,'ssssssssssssssssssssssss');
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=3149;
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 21: UPDATE warehouse SET w_ytd=958249.687500 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id Waiting for request...
+i_recvBytes: 63 
+ Read from client 22: UPDATE stock SET s_quantity=22 WHERE s_w_id=1 AND s_i_id=3149;
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+ (conds: 1, X lock)
+Waiting for request...
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+i_recvBytes: 42 
+ Read from client 24: SELECT w_ytd FROM warehouse WHERE w_id=1;
+Transaction 28457 aborted for deadlock prevention
+
+[DEBUG] SELECT on warehouse uses index: Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+w_id  (conds: 1)
+Transaction 28459 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 22: INSERT INTO order_line VALUES (3025,3,1,7,3149,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 54 
+ Read from client 21: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=5;
+Waiting for request...
+[DEBUG] SELECT on i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=1008;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=4;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28463 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 22: UPDATE stock SET s_quantity=81 WHERE s_w_id=1 AND s_i_id=1008;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Transaction 28455 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=4;
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 22: INSERT INTO order_line VALUES (3025,3,1,8,1008,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+[DEBUG] SELECT on districti_recvBytes: 7 
+ Read from client 24: BEGIN;
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+ uses index: d_w_id d_id  (conds: 2)
+Transaction 28461 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 24: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=6286;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 24: UPDATE warehouse SET w_ytd=958765.250000 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 22: UPDATE stock SET s_quantity=37 WHERE s_w_id=1 AND s_i_id=6286;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 54 
+ Read from client 24: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=9;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28465 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 22: INSERT INTO order_line VALUES (3025,3,1,9,6286,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=8084;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+i_recvBytes: 42 
+ Read from client 21: SELECT w_ytd FROM warehouse WHERE w_id=1;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=1;
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 22: UPDATE stock SET s_quantity=26 WHERE s_w_id=1 AND s_i_id=8084;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=2;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28471 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 23: UPDATE warehouse SET w_ytd=957054.625000 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Transaction 28473 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 54 
+ Read from client 23: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=1;
+i_recvBytes: 55 
+ Read from client 21: UPDATE warehouse SET w_ytd=959028.375000 WHERE w_id=1;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+[DEBUG] UPDATE on Transaction 28474 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+i_recvBytes: 90 
+ Read from client 23: SELECT c_balance, c_first, c_last FROM customer WHERE c_w_id=1 AND c_d_id=1 AND c_id=192;
+[DEBUG] SELECT on customer uses index: c_w_id c_d_id c_id  (conds: 3)
+Waiting for request...
+i_recvBytes: 77 
+ Read from client 23: SELECT o_id, o_carrier_id, o_ol_cnt FROM orders WHERE o_w_id=1 AND o_d_id=1;
+[DEBUG] SELECT on orders uses index: o_w_id o_d_id o_id  (conds: 2)
+Transaction 28476 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 8 
+ Read from client 23: COMMIT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+[DEBUG] SELECT on district[DEBUG] UPDATE on warehouse uses index: stock uses index: s_w_id s_i_id  (conds: 2, X lock)w_id  (conds: 
+1, X lock)
+Transaction 28469 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 23: UPDATE warehouse SET w_ytd=958199.437500 WHERE w_id=1;
+i_recvBytes: 54 
+ Read from client 21: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=3;
+ uses index: d_w_id d_id  (conds: 2)
+Transaction 28470 aborted for deadlock prevention
+
+[DEBUG] SELECT on district uses index: d_w_id d_id Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+ (conds: 2)
+Transaction 28479 aborted for deadlock prevention
+
+Waiting for request...
+[DEBUG] UPDATE on i_recvBytes: 7 
+ Read from client 21: ABORT;
+Waiting for request...
+warehouse uses index: w_id i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+ (conds: 1, X lock)i_recvBytes: 61 
+ Read from client 21: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=10;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28482 aborted for deadlock prevention
+
+Waiting for request...
+
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 88 
+ Read from client 22: INSERT INTO order_line VALUES (3025,3,1,10,8084,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 90 
+ Read from client 21: SELECT c_balance, c_first, c_last FROM customer WHERE c_w_id=1 AND c_d_id=3 AND c_id=275;
+i_recvBytes: 54 
+ Read from client 23: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=2;
+[DEBUG] SELECT on customer uses index: c_w_id c_d_id c_id  (conds: 3)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=8;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28478 aborted for deadlock prevention
+
+i_recvBytes: 77 
+ Read from client 21: SELECT o_id, o_carrier_id, o_ol_cnt FROM orders WHERE o_w_id=1 AND o_d_id=3;
+[DEBUG] SELECT on orders uses index: o_w_id o_d_id o_id  (conds: 2)
+Transaction 28485 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=7143;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28484 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 8 
+ Read from client 21: COMMIT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 22: UPDATE stock SET s_quantity=29 WHERE s_w_id=1 AND s_i_id=7143;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 21: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=2;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28488 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=5;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28490 aborted for deadlock prevention
+
+i_recvBytes: 42 
+ Read from client 24: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+i_recvBytes: 88 
+ Read from client 22: INSERT INTO order_line VALUES (3025,3,1,11,7143,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+Waiting for request...
+i_recvBytes: 8 
+ Read from client 22: COMMIT;
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 24: UPDATE warehouse SET w_ytd=956413.562500 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 42 
+ Read from client 21: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28494 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 91 
+ Read from client 22: SELECT c_balance, c_first, c_last FROM customer WHERE c_w_id=1 AND c_d_id=10 AND c_id=246;
+[DEBUG] SELECT on customer uses index: c_w_id c_d_id c_id  (conds: 3)
+Waiting for request...
+i_recvBytes: 54 
+ Read from client 24: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=8;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=6;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+Waiting for request...
+i_recvBytes: 67 
+ Read from client 24: UPDATE district SET d_ytd=104353.609375 WHERE d_w_id=1 AND d_id=8;
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+Transaction 28491 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 78 
+ Read from client 22: SELECT o_id, o_carrier_id, o_ol_cnt FROM orders WHERE o_w_id=1 AND o_d_id=10;
+[DEBUG] SELECT on orders uses index: o_w_id o_d_id o_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 64 
+ Read from client 23: UPDATE district SET d_next_o_id=3033 WHERE d_w_id=1 AND d_id=6;
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+i_recvBytes: 89 
+ Read from client 21: SELECT c_balance, c_first, c_last FROM customer WHERE c_w_id=1 AND c_d_id=4 AND c_id=84;
+[DEBUG] SELECT on customer uses index: c_w_id c_d_id c_id  (conds: 3)
+Waiting for request...
+i_recvBytes: 103 
+ Read from client 24: SELECT c_balance, c_ytd_payment, c_payment_cnt FROM customer WHERE c_w_id=1 AND c_d_id=8 AND c_id=128;
+[DEBUG] SELECT on customer uses index: c_w_id c_d_id c_id  (conds: 3)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 49 
+ Read from client 23: INSERT INTO orders VALUES (3032,6,1,63,0,0,5,1);
+i_recvBytes: 8 
+ Read from client 22: COMMIT;
+Transaction 28496 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 77 
+ Read from client 21: SELECT o_id, o_carrier_id, o_ol_cnt FROM orders WHERE o_w_id=1 AND o_d_id=4;
+[DEBUG] SELECT on orders uses index: o_w_id o_d_id o_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: INSERT INTO new_orders VALUES (3032,6,1);
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+i_recvBytes: 85 
+ Read from client 24: UPDATE customer SET c_balance=-3548.297607 WHERE c_w_id=1 AND c_d_id=8 AND c_id=128;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Transaction 28502 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=3595;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+i_recvBytes: 8 
+ Read from client 21: COMMIT;
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 22: UPDATE warehouse SET w_ytd=955346.937500 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+i_recvBytes: 88 
+ Read from client 24: UPDATE customer SET c_ytd_payment=3548.297607 WHERE c_w_id=1 AND c_d_id=8 AND c_id=128;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+i_recvBytes: 42 
+ Read from client 21: SELECT w_ytd FROM warehouse WHERE w_id=1;
+Waiting for request...
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28504 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 54 
+ Read from client 22: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=3;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 23: UPDATE stock SET s_quantity=44 WHERE s_w_id=1 AND s_i_id=3595;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+Waiting for request...
+i_recvBytes: 78 
+ Read from client 24: UPDATE customer SET c_payment_cnt=3 WHERE c_w_id=1 AND c_d_id=8 AND c_id=128;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+i_recvBytes: 66 
+ Read from client 22: UPDATE district SET d_ytd=96191.554688 WHERE d_w_id=1 AND d_id=3;
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 23: INSERT INTO order_line VALUES (3032,6,1,1,3595,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+i_recvBytes: 83 
+ Read from client 24: INSERT INTO history VALUES (128,8,1,8,1,0,2384.722656,'aaaaaaaaaaaaaaaaaaaaaaaa');
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 21: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=4;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28510 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=4157;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+i_recvBytes: 101 
+ Read from client 22: SELECT c_balance, c_ytd_payment, c_payment_cnt FROM customer WHERE c_w_id=1 AND c_d_id=3 AND c_id=5;
+[DEBUG] SELECT on customer uses index: c_w_id c_d_id c_id i_recvBytes: 8 
+ Read from client 24: COMMIT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+ (conds: 3)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 23: UPDATE stock SET s_quantity=71 WHERE s_w_id=1 AND s_i_id=4157;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=3;
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28515 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 83 
+ Read from client 22: UPDATE customer SET c_balance=-1328.108154 WHERE c_w_id=1 AND c_d_id=3 AND c_id=5;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 21: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28517 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 23: INSERT INTO order_line VALUES (3032,6,1,2,4157,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=3783;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+i_recvBytes: 86 
+ Read from client 22: UPDATE customer SET c_ytd_payment=1328.108154 WHERE c_w_id=1 AND c_d_id=3 AND c_id=5;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 24: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28521 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+i_recvBytes: 76 
+ Read from client 22: UPDATE customer SET c_payment_cnt=2 WHERE c_w_id=1 AND c_d_id=3 AND c_id=5;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 23: UPDATE stock SET s_quantity=76 WHERE s_w_id=1 AND s_i_id=3783;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+i_recvBytes: 60 
+ Read from client 21: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=7;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28523 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+i_recvBytes: 81 
+ Read from client 22: INSERT INTO history VALUES (5,3,1,3,1,0,1318.108154,'aaaaaaaaaaaaaaaaaaaaaaaa');
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 23: INSERT INTO order_line VALUES (3032,6,1,3,3783,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 8 
+ Read from client 22: COMMIT;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=3;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=2591;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+i_recvBytes: 42 
+ Read from client 21: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=2;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 64 
+ Read from client 24: UPDATE district SET d_next_o_id=3027 WHERE d_w_id=1 AND d_id=3;
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+Transaction 28526 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 21: UPDATE warehouse SET w_ytd=959512.750000 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 23: UPDATE stock SET s_quantity=72 WHERE s_w_id=1 AND s_i_id=2591;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+i_recvBytes: 64 
+ Read from client 22: UPDATE district SET d_next_o_id=3028 WHERE d_w_id=1 AND d_id=2;
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 50 
+ Read from client 24: INSERT INTO orders VALUES (3026,3,1,37,0,0,11,1);
+Waiting for request...
+i_recvBytes: 54 
+ Read from client 21: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=8;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 23: INSERT INTO order_line VALUES (3032,6,1,4,2591,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 50 
+ Read from client 22: INSERT INTO orders VALUES (3027,2,1,103,0,0,7,1);
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 24: INSERT INTO new_orders VALUES (3026,3,1);
+Waiting for request...
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=885;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+i_recvBytes: 42 
+ Read from client 22: INSERT INTO new_orders VALUES (3027,2,1);
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 24: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=4957;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=853;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 24: UPDATE stock SET s_quantity=96 WHERE s_w_id=1 AND s_i_id=4957;
+[DEBUG] UPDATE on Waiting for request...
+i_recvBytes: 62 
+ Read from client 23: UPDATE stock SET s_quantity=50 WHERE s_w_id=1 AND s_i_id=885;
+i_recvBytes: 62 
+ Read from client 22: UPDATE stock SET s_quantity=49 WHERE s_w_id=1 AND s_i_id=853;
+stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Transaction 28538 aborted for deadlock prevention
+
+Waiting for request...
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Transaction 28539 aborted for deadlock prevention
+
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 86 
+ Read from client 23: INSERT INTO order_line VALUES (3032,6,1,5,885,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 87 
+ Read from client 24: INSERT INTO order_line VALUES (3026,3,1,1,4957,1,0,5,5.00,'ssssssssssssssssssssssss');
+Transaction 28541 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 86 
+ Read from client 22: INSERT INTO order_line VALUES (3027,2,1,1,853,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 8 
+ Read from client 23: COMMIT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=8928;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+i_recvBytes: 61 
+ Read from client 24: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=6600;
+[DEBUG] SELECT on stock uses index: Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28543 aborted for deadlock prevention
+
+Waiting for request...
+s_w_id s_i_id  (conds: 2)
+Transaction 28544 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 22: UPDATE stock SET s_quantity=39 WHERE s_w_id=1 AND s_i_id=8928;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 22: INSERT INTO order_line VALUES (3027,2,1,2,8928,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=1;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: SELECT w_ytd FROM warehouse WHERE w_id=1;
+Waiting for request...
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28548 aborted for deadlock prevention
+
+Waiting for request...
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28547 aborted for deadlock prevention
+
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=4364;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=2;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28550 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 22: UPDATE stock SET s_quantity=8 WHERE s_w_id=1 AND s_i_id=4364;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28551 aborted for deadlock prevention
+
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=3;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28552 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 22: INSERT INTO order_line VALUES (3027,2,1,3,4364,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=4352;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=4;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28554 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 63 
+ Read from client 22: UPDATE stock SET s_quantity=94 WHERE s_w_id=1 AND s_i_id=4352;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=5;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28556 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 22: INSERT INTO order_line VALUES (3027,2,1,4,4352,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+Transaction 28555 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+i_recvBytes: 60 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=679;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=6;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28558 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=4;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28559 aborted for deadlock prevention
+
+i_recvBytes: 62 
+ Read from client 22: UPDATE stock SET s_quantity=73 WHERE s_w_id=1 AND s_i_id=679;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=7;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28560 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=8;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28563 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 86 
+ Read from client 22: INSERT INTO order_line VALUES (3027,2,1,5,679,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=10;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28562 aborted for deadlock prevention
+
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=1769;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=9;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28565 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 22: UPDATE stock SET s_quantity=92 WHERE s_w_id=1 AND s_i_id=1769;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=3;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+i_recvBytes: 87 
+ Read from client 22: INSERT INTO order_line VALUES (3027,2,1,6,1769,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=10;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28567 aborted for deadlock prevention
+
+Waiting for request...
+Transaction 28566 aborted for deadlock prevention
+
+i_recvBytes: 60 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=276;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+i_recvBytes: 8 
+ Read from client 24: COMMIT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 22: UPDATE stock SET s_quantity=83 WHERE s_w_id=1 AND s_i_id=276;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=1;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28570 aborted for deadlock prevention
+
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=3;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28571 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 86 
+ Read from client 22: INSERT INTO order_line VALUES (3027,2,1,7,276,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 8 
+ Read from client 22: COMMIT;
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+i_recvBytes: 67 
+ Read from client 21: UPDATE district SET d_ytd=106134.671875 WHERE d_w_id=1 AND d_id=8;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: SELECT w_ytd FROM warehouse WHERE w_id=1;
+Waiting for request...
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 103 
+ Read from client 21: SELECT c_balance, c_ytd_payment, c_payment_cnt FROM customer WHERE c_w_id=1 AND c_d_id=8 AND c_id=166;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+[DEBUG] SELECT on customer uses index: c_w_id c_d_id c_id  (conds: 3)
+Waiting for request...
+i_recvBytes: 85 
+ Read from client 21: UPDATE customer SET c_balance=-4175.792969 WHERE c_w_id=1 AND c_d_id=8 AND c_id=166;
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+i_recvBytes: 88 
+ Read from client 21: UPDATE customer SET c_ytd_payment=4175.792969 WHERE c_w_id=1 AND c_d_id=8 AND c_id=166;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 78 
+ Read from client 21: UPDATE customer SET c_payment_cnt=2 WHERE c_w_id=1 AND c_d_id=8 AND c_id=166;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28573 aborted for deadlock prevention
+
+i_recvBytes: 83 
+ Read from client 21: INSERT INTO history VALUES (166,8,1,8,1,0,4165.792969,'aaaaaaaaaaaaaaaaaaaaaaaa');
+Waiting for request...
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28575 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 24: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28576 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 8 
+ Read from client 21: COMMIT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 42 
+ Read from client 21: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=2;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 21: UPDATE warehouse SET w_ytd=961959.312500 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28582 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=1;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 64 
+ Read from client 23: UPDATE district SET d_next_o_id=3029 WHERE d_w_id=1 AND d_id=2;
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+Transaction 28579 aborted for deadlock prevention
+
+i_recvBytes: 54 
+ Read from client 21: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=2;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+i_recvBytes: 64 
+ Read from client 24: UPDATE district SET d_next_o_id=3029 WHERE d_w_id=1 AND d_id=1;
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+Transaction 28583 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+i_recvBytes: 50 
+ Read from client 23: INSERT INTO orders VALUES (3028,2,1,227,0,0,8,1);
+Waiting for request...
+Waiting for request...
+i_recvBytes: 51 
+ Read from client 24: INSERT INTO orders VALUES (3028,1,1,131,0,0,14,1);
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+i_recvBytes: 66 
+ Read from client 21: UPDATE district SET d_ytd=83673.875000 WHERE d_w_id=1 AND d_id=2;
+i_recvBytes: 42 
+ Read from client 23: INSERT INTO new_orders VALUES (3028,2,1);
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 24: INSERT INTO new_orders VALUES (3028,1,1);
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=9;
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)Waiting for request...
+
+i_recvBytes: 61 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=4806;
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 24: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=7299;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28587 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 103 
+ Read from client 21: SELECT c_balance, c_ytd_payment, c_payment_cnt FROM customer WHERE c_w_id=1 AND c_d_id=2 AND c_id=136;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+[DEBUG] SELECT on customer uses index: c_w_id c_d_id c_id  (conds: 3)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=2;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28593 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 85 
+ Read from client 21: UPDATE customer SET c_balance=-2456.593506 WHERE c_w_id=1 AND c_d_id=2 AND c_id=136;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+i_recvBytes: 88 
+ Read from client 21: UPDATE customer SET c_ytd_payment=2456.593506 WHERE c_w_id=1 AND c_d_id=2 AND c_id=136;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=5;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28595 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 78 
+ Read from client 21: UPDATE customer SET c_payment_cnt=2 WHERE c_w_id=1 AND c_d_id=2 AND c_id=136;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+[DEBUG] SELECT on Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 83 
+ Read from client 21: INSERT INTO history VALUES (136,2,1,2,1,0,2446.593506,'aaaaaaaaaaaaaaaaaaaaaaaa');
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+i_recvBytes: 63 
+ Read from client 23: UPDATE stock SET s_quantity=71 WHERE s_w_id=1 AND s_i_id=4806;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+[DEBUG] SELECT on warehouse uses index: Transaction 28598 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 8 
+ Read from client 21: COMMIT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 24: UPDATE stock SET s_quantity=77 WHERE s_w_id=1 AND s_i_id=7299;
+i_recvBytes: 87 
+ Read from client 23: INSERT INTO order_line VALUES (3028,2,1,1,4806,1,0,5,5.00,'ssssssssssssssssssssssss');
+w_id  (conds: 1)
+Transaction 28597 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 21: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=4;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 64 
+ Read from client 21: UPDATE district SET d_next_o_id=3026 WHERE d_w_id=1 AND d_id=4;
+i_recvBytes: 61 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=1860;
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+i_recvBytes: 87 
+ Read from client 24: INSERT INTO order_line VALUES (3028,1,1,1,7299,1,0,5,5.00,'ssssssssssssssssssssssss');
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 51 
+ Read from client 21: INSERT INTO orders VALUES (3025,4,1,166,0,0,13,1);
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 24: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=2662;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+i_recvBytes: 63 
+ Read from client 23: UPDATE stock SET s_quantity=37 WHERE s_w_id=1 AND s_i_id=1860;
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 22: UPDATE warehouse SET w_ytd=964649.625000 WHERE w_id=1;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 21: INSERT INTO new_orders VALUES (3025,4,1);
+Waiting for request...
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 24: UPDATE stock SET s_quantity=48 WHERE s_w_id=1 AND s_i_id=2662;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=8448;
+i_recvBytes: 87 
+ Read from client 23: INSERT INTO order_line VALUES (3028,2,1,2,1860,1,0,5,5.00,'ssssssssssssssssssssssss');
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 54 
+ Read from client 22: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=6;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28603 aborted for deadlock prevention
+
+i_recvBytes: 87 
+ Read from client 24: INSERT INTO order_line VALUES (3028,1,1,2,2662,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=39 WHERE s_w_id=1 AND s_i_id=8448;
+Waiting for request...
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+i_recvBytes: 61 
+ Read from client 24: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=9249;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Transaction 28613 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3025,4,1,1,8448,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=1935;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 22: UPDATE warehouse SET w_ytd=966685.812500 WHERE w_id=1;
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 23: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=5663;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 21: UPDATE stock SET s_quantity=6 WHERE s_w_id=1 AND s_i_id=1935;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+i_recvBytes: 42 
+ Read from client 24: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28616 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 22: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=10;
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3025,4,1,2,1935,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+[DEBUG] SELECT on district uses index: d_w_id Transaction 28615 aborted for deadlock prevention
+
+d_id  (conds: Waiting for request...
+2)
+Transaction 28612 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=3986;
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=50 WHERE s_w_id=1 AND s_i_id=3986;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3025,4,1,3,3986,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=369;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 21: UPDATE stock SET s_quantity=71 WHERE s_w_id=1 AND s_i_id=369;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 86 
+ Read from client 21: INSERT INTO order_line VALUES (3025,4,1,4,369,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=8;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28621 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=1;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_idWaiting for request...
+  (conds: 2)
+Transaction 28619 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=2;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28624 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=5;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=8;
+Waiting for request...
+[DEBUG] SELECT on i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=3;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28626 aborted for deadlock prevention
+
+Waiting for request...
+district uses index: d_w_id d_id  (conds: 2)
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28623 aborted for deadlock prevention
+
+Waiting for request...
+Transaction 28625 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=4;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28628 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=8;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28629 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=1196;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=5;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28631 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=76 WHERE s_w_id=1 AND s_i_id=1196;
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: SELECT w_ytd FROM warehouse WHERE w_id=1;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=6;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28635 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=4;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3025,4,1,5,1196,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=502;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=7;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28636 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 23: UPDATE warehouse SET w_ytd=965660.437500 WHERE w_id=1;
+Transaction 28634 aborted for deadlock prevention
+
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+i_recvBytes: 54 
+ Read from client 23: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=2;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 21: UPDATE stock SET s_quantity=30 WHERE s_w_id=1 AND s_i_id=502;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=8;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28639 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28638 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 86 
+ Read from client 21: INSERT INTO order_line VALUES (3025,4,1,6,502,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 62 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=9;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: 2)
+Transaction 28640 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=8410;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+)
+Transaction 28632 aborted for deadlock prevention
+
+[DEBUG] SELECT on Waiting for request...
+stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+i_recvBytes: 63 
+ Read from client 24: SELECT no_o_id FROM new_orders WHERE no_w_id=1 AND no_d_id=10;
+[DEBUG] SELECT on new_orders uses index: no_w_id no_d_id no_o_id  (conds: Waiting for request...
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=29 WHERE s_w_id=1 AND s_i_id=8410;
+2)
+Transaction 28643 aborted for deadlock prevention
+
+Waiting for request...
+[DEBUG] UPDATE on stock uses index: s_w_id i_recvBytes: 7 
+ Read from client 23: ABORT;
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 22: UPDATE warehouse SET w_ytd=962373.125000 WHERE w_id=1;
+s_i_id  (conds: 2Waiting for request...
+, X lock)
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3025,4,1,7,8410,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 8 
+ Read from client 24: COMMIT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 54 
+ Read from client 22: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=1;
+i_recvBytes: 90 
+ Read from client 23: SELECT c_balance, c_first, c_last FROM customer WHERE c_w_id=1 AND c_d_id=5 AND c_id=131;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+[DEBUG] SELECT on customer uses index: c_w_id Transaction 28642 aborted for deadlock prevention
+c_d_id c_id  (conds: i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=8652;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+3)
+i_recvBytes: 42 
+ Read from client 24: SELECT w_ytd FROM warehouse WHERE w_id=1;
+Waiting for request...
+i_recvBytes: 77 
+ Read from client 23: SELECT o_id, o_carrier_id, o_ol_cnt FROM orders WHERE o_w_id=1 AND o_d_id=5;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+
+[DEBUG] SELECT on orders uses index: o_w_id o_d_id o_id  (conds: 2)Waiting for request...
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=79 WHERE s_w_id=1 AND s_i_id=8652;
+
+[DEBUG] UPDATE on Transaction 28645 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+i_recvBytes: 8 
+ Read from client 23: COMMIT;
+i_recvBytes: 55 
+ Read from client 24: UPDATE warehouse SET w_ytd=966028.687500 WHERE w_id=1;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=4;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+[DEBUG] SELECT on district uses index: d_w_id d_idWaiting for request...
+ i_recvBytes: 42 
+ Read from client 22: SELECT w_ytd FROM warehouse WHERE w_id=1;
+ (conds: 2)
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)Transaction 28650 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+Waiting for request...
+i_recvBytes: 54 
+ Read from client 24: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=9;
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3025,4,1,8,8652,1,0,5,5.00,'ssssssssssssssssssssssss');
+
+Transaction 28651 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28647 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=946;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=4;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=10;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28655 aborted for deadlock prevention
+
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 21: UPDATE stock SET s_quantity=57 WHERE s_w_id=1 AND s_i_id=946;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+i_recvBytes: 42 
+ Read from client 24: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+Transaction 28654 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+Waiting for request...
+i_recvBytes: 86 
+ Read from client 21: INSERT INTO order_line VALUES (3025,4,1,9,946,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 55 
+ Read from client 24: UPDATE warehouse SET w_ytd=963891.125000 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=1901;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28660 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=5;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28661 aborted for deadlock prevention
+
+i_recvBytes: 55 
+ Read from client 24: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=10;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28657 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=70 WHERE s_w_id=1 AND s_i_id=1901;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=9;
+Waiting for request...
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28663 aborted for deadlock prevention
+
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 88 
+ Read from client 21: INSERT INTO order_line VALUES (3025,4,1,10,1901,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 42 
+ Read from client 24: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=7;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28667 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=8423;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+i_recvBytes: 55 
+ Read from client 24: UPDATE warehouse SET w_ytd=962598.187500 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=27 WHERE s_w_id=1 AND s_i_id=8423;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=3;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28669 aborted for deadlock prevention
+
+i_recvBytes: 54 
+ Read from client 24: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=1;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=3;
+Waiting for request...
+i_recvBytes: 88 
+ Read from client 21: INSERT INTO order_line VALUES (3025,4,1,11,8423,1,0,5,5.00,'ssssssssssssssssssssssss');
+[DEBUG] SELECT on district uses index: d_w_id Transaction 28666 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=4998;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 23: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=9;
+d_id  (conds: 2)
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2Transaction 28671 aborted for deadlock prevention
+
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+Waiting for request...
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=86 WHERE s_w_id=1 AND s_i_id=4998;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=2;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28675 aborted for deadlock prevention
+
+Waiting for request...
+)i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+i_recvBytes: 88 
+ Read from client 21: INSERT INTO order_line VALUES (3025,4,1,12,4998,1,0,5,5.00,'ssssssssssssssssssssssss');
+
+Waiting for request...
+Transaction 28673 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: ABORT;
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=997;
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=5;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 89 
+ Read from client 23: SELECT c_balance, c_first, c_last FROM customer WHERE c_w_id=1 AND c_d_id=9 AND c_id=77;
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=7;
+Waiting for request...
+i_recvBytes: 62 
+ Read from client 21: UPDATE stock SET s_quantity=13 WHERE s_w_id=1 AND s_i_id=997;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28680 aborted for deadlock prevention
+
+Waiting for request...
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+[DEBUG] SELECT on customer uses index: c_w_id c_d_id c_id  (conds: 3)
+Transaction 28681 aborted for deadlock prevention
+
+Waiting for request...
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 77 
+ Read from client 23: SELECT o_id, o_carrier_id, o_ol_cnt FROM orders WHERE o_w_id=1 AND o_d_id=9;
+[DEBUG] SELECT on orders uses index: o_w_id o_d_id o_id  (conds: 2)
+Transaction 28679 aborted for deadlock prevention
+
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3025,4,1,13,997,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 7 
+ Read from client 22: ABORT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 8 
+ Read from client 23: COMMIT;
+i_recvBytes: 7 
+ Read from client 22: BEGIN;
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=8;
+Waiting for request...
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28684 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 8 
+ Read from client 21: COMMIT;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 21: BEGIN;
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Waiting for request...
+i_recvBytes: 60 
+ Read from client 21: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=1;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 23: UPDATE warehouse SET w_ytd=965016.687500 WHERE w_id=1;
+i_recvBytes: 60 
+ Read from client 22: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=5;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: i_recvBytes: 7 
+ Read from client 2)Waiting for request...
+i_recvBytes: 64 
+ Read from client 21: UPDATE district SET d_next_o_id=3029 WHERE d_w_id=1 AND d_id=1;
+
+[DEBUG] UPDATE on district uses index: Waiting for request...
+24: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 54 
+ Read from client 23: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=9;
+i_recvBytes: 64 
+ Read from client 22: UPDATE district SET d_next_o_id=3030 WHERE d_w_id=1 AND d_id=5;
+i_recvBytes: 42 
+ Read from client 24: SELECT w_ytd FROM warehouse WHERE w_id=1;
+d_w_id d_id  (conds: 2, X lock)
+Transaction 28688 aborted for deadlock prevention
+
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28690 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 51 
+ Read from client 21: INSERT INTO orders VALUES (3028,1,1,172,0,0,12,1);
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+i_recvBytes: 66 
+ Read from client 23: UPDATE district SET d_ytd=81770.234375 WHERE d_w_id=1 AND d_id=9;
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+Transaction 28686 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 21: INSERT INTO new_orders VALUES (3028,1,1);
+i_recvBytes: 50 
+ Read from client 22: INSERT INTO orders VALUES (3029,5,1,156,0,0,7,1);
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=8;
+Waiting for request...
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Transaction 28693 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 103 
+ Read from client 23: SELECT c_balance, c_ytd_payment, c_payment_cnt FROM customer WHERE c_w_id=1 AND c_d_id=9 AND c_id=138;
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=7935;
+[DEBUG] SELECT on customer uses index: c_w_id c_d_id c_id  (conds: 3)
+i_recvBytes: 42 
+ Read from client 22: INSERT INTO new_orders VALUES (3029,5,1);
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=2935;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=66 WHERE s_w_id=1 AND s_i_id=7935;
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+i_recvBytes: 63 
+ Read from client 22: UPDATE stock SET s_quantity=14 WHERE s_w_id=1 AND s_i_id=2935;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 85 
+ Read from client 23: UPDATE customer SET c_balance=-3067.370117 WHERE c_w_id=1 AND c_d_id=9 AND c_id=138;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Transaction 28701 aborted for deadlock prevention
+
+i_recvBytes: 7 
+ Waiting for request...
+i_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3028,1,1,1,7935,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+Read from client 24: BEGIN;
+Waiting for request...
+i_recvBytes: 88 
+ Read from client 23: UPDATE customer SET c_ytd_payment=3067.370117 WHERE c_w_id=1 AND c_d_id=9 AND c_id=138;
+i_recvBytes: 87 
+ Read from client 22: INSERT INTO order_line VALUES (3029,5,1,1,2935,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=8199;
+Waiting for request...
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=4;
+Waiting for request...
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+i_recvBytes: 63 
+ Read from client 22: UPDATE stock SET s_quantity=51 WHERE s_w_id=1 AND s_i_id=8199;
+Transaction 28704 aborted for deadlock prevention
+
+[DEBUG] UPDATE on stockWaiting for request...
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+ uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=5594;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 78 
+ Read from client 23: UPDATE customer SET c_payment_cnt=2 WHERE c_w_id=1 AND c_d_id=9 AND c_id=138;
+[DEBUG] UPDATE on customer uses index: c_w_id c_d_id c_id  (conds: 3, X lock)
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=86 WHERE s_w_id=1 AND s_i_id=5594;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+i_recvBytes: 42 
+ Read from client 24: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+Transaction 28709 aborted for deadlock prevention
+
+Waiting for request...
+Waiting for request...
+i_recvBytes: 83 
+ Read from client 23: INSERT INTO history VALUES (138,9,1,9,1,0,3057.370117,'aaaaaaaaaaaaaaaaaaaaaaaa');
+i_recvBytes: 7 
+ Read from client 24: ABORT;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3028,1,1,2,5594,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+Waiting for request...
+i_recvBytes: 8 
+ Read from client 23: COMMIT;
+i_recvBytes: 7 
+ Read from client 24: BEGIN;
+Waiting for request...
+Waiting for request...
+i_recvBytes: 7 
+ Read from client 23: BEGIN;
+i_recvBytes: 87 
+ Read from client 22: INSERT INTO order_line VALUES (3029,5,1,2,8199,1,0,5,5.00,'ssssssssssssssssssssssss');
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=2975;
+i_recvBytes: 60 
+ Read from client 24: SELECT d_next_o_id FROM district WHERE d_w_id=1 AND d_id=8;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 42 
+ Read from client 23: SELECT w_ytd FROM warehouse WHERE w_id=1;
+[DEBUG] SELECT on warehouse uses index: w_id  (conds: 1)
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 55 
+ Read from client 23: UPDATE warehouse SET w_ytd=966892.562500 WHERE w_id=1;
+[DEBUG] UPDATE on warehouse uses index: w_id  (conds: 1, X lock)
+i_recvBytes: 64 
+ Read from client 24: UPDATE district SET d_next_o_id=3030 WHERE d_w_id=1 AND d_id=8;
+[DEBUG] UPDATE on district uses index: d_w_id d_id  (conds: 2, X lock)
+Waiting for request...
+Waiting for request...
+i_recvBytes: 63 
+ Read from client 21: UPDATE stock SET s_quantity=55 WHERE s_w_id=1 AND s_i_id=2975;
+[DEBUG] UPDATE on stock uses index: s_w_id s_i_id  (conds: 2, X lock)
+Waiting for request...
+i_recvBytes: 54 
+ Read from client 23: SELECT d_ytd FROM district WHERE d_w_id=1 AND d_id=7;
+[DEBUG] SELECT on district uses index: d_w_id d_id  (conds: 2)
+Waiting for request...
+i_recvBytes: 87 
+ Read from client 21: INSERT INTO order_line VALUES (3028,1,1,3,2975,1,0,5,5.00,'ssssssssssssssssssssssss');
+i_recvBytes: 51 
+ Read from client 24: INSERT INTO orders VALUES (3029,8,1,119,0,0,11,1);
+Waiting for request...
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 21: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=6652;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+i_recvBytes: 42 
+ Read from client 24: INSERT INTO new_orders VALUES (3029,8,1);
+Waiting for request...
+Transaction 28714 aborted for deadlock prevention
+
+Waiting for request...
+i_recvBytes: 61 
+ Read from client 24: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=7017;
+i_recvBytes: 61 
+ Read from client 22: SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=1248;
+[DEBUG] SELECT on stock uses index: s_w_id s_i_id  (conds: 2)
+Waiting for request...
+Waiting for request...

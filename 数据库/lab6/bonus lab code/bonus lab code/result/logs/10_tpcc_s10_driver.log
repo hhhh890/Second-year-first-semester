@@ -1,0 +1,9 @@
+[driver] host=127.0.0.1 port=8765 warehouses=1 threads=4 duration=60s scale=10 items=10000 cust/dist=300
+
+=========== TPC-C Result ===========
+duration:  60.0298 s
+committed: 4015
+aborted:   8286
+TPS (commit/s): 66.8834
+tpmC (NewOrder/min approx): 1805.85
+latency p50/p95/p99 (us): 9488 / 87287 / 158962

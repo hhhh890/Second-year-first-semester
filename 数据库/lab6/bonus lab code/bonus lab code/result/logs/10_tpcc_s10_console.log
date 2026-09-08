@@ -1,0 +1,41 @@
+[run_s10 18:38:30] tpcc_db.golden_s10 不存在，自动调用 01_setup.sh --only=10 ...
+[setup 18:38:30] checking environment ...
+[setup 18:38:30]   cmake=3.28.3  g++=13  cores=16
+[setup 18:38:30] skip build (per --skip-build)
+[setup 18:38:30] === 制作 golden: scale=10 → tpcc_db.golden_s10  (预计 约 30 秒) ===
+[setup 18:39:02] loader 完成，耗时 31s
+[setup 18:39:02] stopping rmdb (SIGINT, 优雅) ...
+[setup 18:39:11] 复制 tpcc_db → tpcc_db.golden_s10 ...
+[setup 18:39:15] ✓ tpcc_db.golden_s10 就绪，size=238M
+[setup 18:39:15] ==========================================
+[setup 18:39:15] ✅ 准备完成 ALL READY
+    drwxrwxrwx 1 sophie sophie 4096 Jun  9 18:39 tpcc_db.golden_s10
+[setup 18:39:15] 下一步可执行：
+[setup 18:39:15]     bash scripts/02_run_s10_t4_d60.sh    # 中规模 60 秒压测
+[setup 18:39:15]     bash scripts/03_run_s1_t4_d300.sh    # 全量 5 分钟长压
+[setup 18:39:15] ==========================================
+[run_s10 18:39:15] 用 golden 还原 tpcc_db ...
+[run_s10 18:39:19] starting rmdb ...
+[run_s10 18:39:20] rmdb pid=609 listening on 8765
+[run_s10 18:39:20] running driver: -t 4 -d 60 -S 10 ...
+[driver] host=127.0.0.1 port=8765 warehouses=1 threads=4 duration=60s scale=10 items=10000 cust/dist=300
+
+=========== TPC-C Result ===========
+duration:  60.0298 s
+committed: 4015
+aborted:   8286
+TPS (commit/s): 66.8834
+tpmC (NewOrder/min approx): 1805.85
+latency p50/p95/p99 (us): 9488 / 87287 / 158962
+[run_s10 18:40:20] driver finished.
+[run_s10 18:40:20] stopping rmdb ...
+[run_s10 18:40:27] ========== RESULT (scale=10, t=4, d=60) ==========
+    [driver] host=127.0.0.1 port=8765 warehouses=1 threads=4 duration=60s scale=10 items=10000 cust/dist=300
+    duration:  60.0298 s
+    committed: 4015
+    aborted:   8286
+    TPS (commit/s): 66.8834
+    tpmC (NewOrder/min approx): 1805.85
+    latency p50/p95/p99 (us): 9488 / 87287 / 158962
+[run_s10 18:40:27] driver log: /mnt/c/Users/26684/Desktop/bonus lab/Bonus_Lab_About_TP_Performance_Optimization-main/build/dbroot/driver_s10_t4_d60.log
+[run_s10 18:40:27] server log: /mnt/c/Users/26684/Desktop/bonus lab/Bonus_Lab_About_TP_Performance_Optimization-main/build/dbroot/server_s10_t4_d60.log

@@ -1,0 +1,35 @@
+[run_s1 18:41:02] tpcc_db.golden_s1 不存在，将自动调用 01_setup.sh --only=1（约 2~3 分钟） ...
+[setup 18:41:02] checking environment ...
+[setup 18:41:02]   cmake=3.28.3  g++=13  cores=16
+[setup 18:41:02] skip build (per --skip-build)
+[setup 18:41:02] === 制作 golden: scale=1 → tpcc_db.golden_s1  (预计 约 2~3 分钟) ===
+[setup 18:48:19] loader 完成，耗时 436s
+[setup 18:48:19] stopping rmdb (SIGINT, 优雅) ...
+[setup 18:48:28] 复制 tpcc_db → tpcc_db.golden_s1 ...
+[setup 18:48:59] ✓ tpcc_db.golden_s1 就绪，size=2.4G
+[setup 18:48:59] ==========================================
+[setup 18:48:59] ✅ 准备完成 ALL READY
+    drwxrwxrwx 1 sophie sophie 4096 Jun  9 18:39 tpcc_db.golden_s10
+    drwxrwxrwx 1 sophie sophie 4096 Jun  9 18:48 tpcc_db.golden_s1
+[setup 18:48:59] 下一步可执行：
+[setup 18:48:59]     bash scripts/02_run_s10_t4_d60.sh    # 中规模 60 秒压测
+[setup 18:48:59]     bash scripts/03_run_s1_t4_d300.sh    # 全量 5 分钟长压
+[setup 18:48:59] ==========================================
+[run_s1 18:48:59] 用 golden 还原 tpcc_db (2.4G) ...
+[run_s1 18:49:31] starting rmdb ...
+[run_s1 18:49:32] rmdb pid=1530 listening on 8765
+[run_s1 18:49:32] launching driver in background: -t 4 -d 300 -S 1 (预计 300 秒 + 数据扫描)
+[run_s1 18:49:33] driver pid=1539
+[run_s1 18:49:33] alive, waiting ... (driver.log tail: <empty>)
+[run_s1 18:49:55] alive, waiting ... (driver.log tail: <empty>)
+[run_s1 18:50:18] alive, waiting ... (driver.log tail: <empty>)
+[run_s1 18:50:44] alive, waiting ... (driver.log tail: <empty>)
+[run_s1 18:51:06] alive, waiting ... (driver.log tail: <empty>)
+[run_s1 18:51:31] alive, waiting ... (driver.log tail: <empty>)
+[run_s1 18:51:55] alive, waiting ... (driver.log tail: <empty>)
+[run_s1 18:52:17] alive, waiting ... (driver.log tail: <empty>)
+[run_s1 18:52:43] alive, waiting ... (driver.log tail: <empty>)
+[run_s1 18:53:06] alive, waiting ... (driver.log tail: <empty>)
+[run_s1 18:53:28] alive, waiting ... (driver.log tail: <empty>)
+[run_s1 18:53:51] alive, waiting ... (driver.log tail: <empty>)
+[run_s1 18:54:13] alive, waiting ... (driver.log tail: <empty>)
