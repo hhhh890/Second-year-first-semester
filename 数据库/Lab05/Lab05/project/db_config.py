@@ -3,7 +3,7 @@ import mysql.connector
 # Database configuration constants
 DB_HOST = "localhost"
 DB_USER = "root"
-DB_PASSWORD = "123456"
+DB_PASSWORD = "xxx"
 DB_NAME = "Mini_WeChat"
 
 def get_connection(role_name=None):
